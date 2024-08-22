@@ -1,0 +1,63 @@
+Points on a Line 
+Given 3 points on a 2D plane, check if they can be connected by using a single straight line.
+
+
+
+Input Format
+
+First line of the input contains T - the number of test cases. Its followed by 3T lines, each line contains 2 integers x and y, representing the coordinates of the 3 points respectively.
+
+
+
+Output Format
+
+For each test case, print "Yes" if they can be connected by using a single straight line, print "No" otherwise, separated by newline.
+
+
+
+Constraints
+
+1 <= T <= 105
+
+-106 <= x,y <= 106
+
+
+
+Example
+
+Input
+
+1
+
+1 1
+
+2 2
+
+3 3
+
+
+
+Output
+
+Yes
+
+
+
+Explanation
+
+
+
+Self Explanatory
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+a=int(input())
+while a>0:
+    x1,y1=map(int,input().split())
+    x2,y2=map(int,input().split())
+    x3,y3=map(int,input().split())
+    c= x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)
+    if c==0:
+        print("Yes")
+    else:
+        print("No")
+    a-=1
